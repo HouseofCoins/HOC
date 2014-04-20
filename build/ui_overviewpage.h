@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'overviewpage.ui'
 **
-** Created: Wed Apr 16 17:05:05 2014
+** Created: Sat Apr 19 23:50:00 2014
 **      by: Qt User Interface Compiler version 4.8.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -46,6 +46,7 @@ public:
     QLabel *labelUnconfirmed;
     QLabel *labelImmatureText;
     QLabel *labelImmature;
+    QLabel *label_6;
     QSpacerItem *verticalSpacer;
     QVBoxLayout *verticalLayout_3;
     QFrame *frame_2;
@@ -61,12 +62,12 @@ public:
     {
         if (OverviewPage->objectName().isEmpty())
             OverviewPage->setObjectName(QString::fromUtf8("OverviewPage"));
-        OverviewPage->resize(573, 342);
+        OverviewPage->resize(576, 478);
         topLayout = new QVBoxLayout(OverviewPage);
         topLayout->setObjectName(QString::fromUtf8("topLayout"));
         labelAlerts = new QLabel(OverviewPage);
         labelAlerts->setObjectName(QString::fromUtf8("labelAlerts"));
-        labelAlerts->setVisible(false);
+        labelAlerts->setVisible(true);
         labelAlerts->setStyleSheet(QString::fromUtf8("background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0, stop:0 #F0D0A0, stop:1 #F8D488); color:#000000;"));
         labelAlerts->setWordWrap(true);
         labelAlerts->setMargin(3);
@@ -116,12 +117,22 @@ public:
         formLayout_2->setVerticalSpacing(12);
         label = new QLabel(frame);
         label->setObjectName(QString::fromUtf8("label"));
+        QFont font1;
+        font1.setPointSize(11);
+        font1.setBold(false);
+        font1.setItalic(false);
+        font1.setWeight(50);
+        label->setFont(font1);
 
         formLayout_2->setWidget(0, QFormLayout::LabelRole, label);
 
         labelBalance = new QLabel(frame);
         labelBalance->setObjectName(QString::fromUtf8("labelBalance"));
-        labelBalance->setFont(font);
+        QFont font2;
+        font2.setPointSize(12);
+        font2.setBold(true);
+        font2.setWeight(75);
+        labelBalance->setFont(font2);
         labelBalance->setCursor(QCursor(Qt::IBeamCursor));
         labelBalance->setText(QString::fromUtf8("0 HOC"));
         labelBalance->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
@@ -144,12 +155,17 @@ public:
 
         labelImmatureText = new QLabel(frame);
         labelImmatureText->setObjectName(QString::fromUtf8("labelImmatureText"));
+        labelImmatureText->setFont(font1);
 
         formLayout_2->setWidget(2, QFormLayout::LabelRole, labelImmatureText);
 
         labelImmature = new QLabel(frame);
         labelImmature->setObjectName(QString::fromUtf8("labelImmature"));
-        labelImmature->setFont(font);
+        QFont font3;
+        font3.setPointSize(11);
+        font3.setBold(true);
+        font3.setWeight(75);
+        labelImmature->setFont(font3);
         labelImmature->setText(QString::fromUtf8("0 HOC"));
         labelImmature->setTextInteractionFlags(Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse);
 
@@ -160,6 +176,13 @@ public:
 
 
         verticalLayout_2->addWidget(frame);
+
+        label_6 = new QLabel(OverviewPage);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setPixmap(QPixmap(QString::fromUtf8(":/images/res/images/img.png")));
+        label_6->setAlignment(Qt::AlignCenter);
+
+        verticalLayout_2->addWidget(label_6);
 
         verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
@@ -248,6 +271,7 @@ public:
 #ifndef QT_NO_TOOLTIP
         labelImmature->setToolTip(QApplication::translate("OverviewPage", "Mined balance that has not yet matured", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
+        label_6->setText(QString());
         label_4->setText(QApplication::translate("OverviewPage", "<b>Recent transactions</b>", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
         labelTransactionsStatus->setToolTip(QApplication::translate("OverviewPage", "The displayed information may be out of date. Your wallet automatically synchronizes with the Houseofcoins network after a connection is established, but this process has not completed yet.", 0, QApplication::UnicodeUTF8));
