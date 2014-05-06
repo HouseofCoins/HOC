@@ -1063,7 +1063,7 @@ uint256 static GetOrphanRoot(const CBlockHeader* pblock)
 
 int64 static GetBlockValue(int nHeight, int64 nFees)
 {
- int64 nSubsidy = 50*COIN;
+ int64 nSubsidy = 75*COIN;
 
     if (nHeight == 1)
         nSubsidy = 10500000 * COIN;  // premine for HouseofCoins [HOC] Members
