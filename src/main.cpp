@@ -50,7 +50,7 @@ unsigned int nCoinCacheSize = 5000;
 
 // [Micryon] Emergency fork blocks
 const int EMERGENCY_FORK_BLOCK = 643;
-const int KGW_BLOCK_START = 700;
+const int KGW_BLOCK_START = 665;
 
 /** Fees smaller than this (in satoshi) are considered zero fee (for transaction creation) */
 int64 CTransaction::nMinTxFee = 100000;
